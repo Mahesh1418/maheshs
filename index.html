@@ -68,7 +68,31 @@
             }
         }
     </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PDD4KKS93F"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
+        gtag('config', 'G-PDD4KKS93F');
+    </script>
+    <!-- schema code -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Mahesh",
+            "jobTitle": "Front End Developer & WordPress UI Developer",
+            "url": "https://mahesh.devconsole.site/",
+            "image": "https://mahesh.devconsole.site/assets/images/fve.png",
+            "description": "Mahesh is a skilled Front End Developer specializing in Angular and WordPress UI development, creating fast, responsive, and SEO-optimized websites.",
+            "sameAs": [
+                "https://www.linkedin.com/in/mahesh-s-338b12255/"
+            ]
+        }
+        </script>
+    <!-- End schema code -->
     <style>
         body {
             background-color: #050505;
@@ -298,27 +322,24 @@
     <div class="cursor-outline"></div>
 
     <!-- Navigation -->
-    <nav
-        class="fixed w-full z-50 top-0 left-0 px-6 py-4 flex justify-between items-center glass-card border-none rounded-none bg-dark/80 backdrop-blur-xl border-b border-white/5">
-        <a href="index.html" class="text-2xl font-black tracking-tighter relative group">Mahesh S<span
-                class="text-primary group-hover:text-secondary transition-colors">.</span>
-            <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300">
+    <div class="fixed w-full z-50 top-6 px-4 pointer-events-none">
+        <nav
+            class="max-w-fit mx-auto px-6 py-3 flex items-center gap-8 glass-card bg-dark/60 backdrop-blur-xl border border-white/10 rounded-full pointer-events-auto">
+            <a href="index.html" class="text-xl font-black tracking-tighter relative group shrink-0">Mahesh S<span
+                    class="text-primary group-hover:text-secondary transition-colors">.</span></a>
+            
+            <div class="hidden md:flex items-center space-x-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="#home" class="hover:text-white transition-colors relative group">Home</a>
+                <a href="#about" class="hover:text-white transition-colors relative group">About</a>
+                <a href="#work" class="hover:text-white transition-colors relative group">Work</a>
+                <a href="#contact" class="hover:text-white transition-colors relative group">Contact</a>
             </div>
-        </a>
-        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
-            <a href="#home" class="hover:text-primary transition-colors relative group">Home<span
-                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span></a>
-            <a href="#about" class="hover:text-primary transition-colors relative group">About<span
-                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span></a>
-            <a href="#work" class="hover:text-primary transition-colors relative group">Work<span
-                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span></a>
-            <a href="#contact" class="hover:text-primary transition-colors relative group">Contact<span
-                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span></a>
-        </div>
-        <a href="#contact"
-            class="px-6 py-2 border border-white/10 bg-white/5 text-white rounded-full text-sm font-medium hover:bg-primary hover:text-dark hover:border-primary transition-all duration-300 shadow-[0_0_20px_rgba(0,242,234,0)] hover:shadow-[0_0_20px_rgba(0,242,234,0.4)]">Let's
-            Talk</a>
-    </nav>
+
+            <a href="#contact"
+                class="px-5 py-2 bg-white text-dark rounded-full text-xs font-black uppercase tracking-tighter hover:bg-primary transition-all duration-300 shadow-[0_0_20px_rgba(255,255,255,0.1)]">Let's
+                Talk</a>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
     <section id="home"
@@ -1150,7 +1171,7 @@
             <h2 class="text-5xl md:text-8xl font-black mt-6 mb-12 tracking-tighter">LET'S WORK<br><span
                     class="text-gradient">TOGETHER</span></h2>
 
-            <a href="mailto:contact@example.com"
+            <a href="mailto:smahesheee04@gmail.com" target="_blank"
                 class="group relative inline-flex items-center justify-center w-48 h-48 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl hover:scale-110 transition-transform duration-500">
                 <div
                     class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-500">
