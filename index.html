@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Mahesh S | Front End Developer & WordPress UI Developer Portfolio</title>
+    <meta name="title" content="Mahesh | Front End Developer & WordPress UI Developer Portfolio">
+    <meta name="description"
+        content="Explore Mahesh's portfolio featuring fast, SEO-optimized, responsive websites built with WordPress and modern frontend technologies.">
+    <meta name="keywords"
+        content="Front End Developer, WordPress Developer, UI Developer, Web Designer, SEO Expert, Web Developer Portfolio, Responsive Design, GA4 Integration, HTML, CSS, JavaScript, Web Performance">
+    <meta name="author" content="Mahesh S">
+    <meta name="robots" content="index, follow">
+    <meta name="google-site-verification" content="NIU9Bx8lXNCvaeIXBylhDbWIKzWkk_ZjPPpRNY6Rorg">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mahesh.devconsole.site/">
+    <meta property="og:title" content="Mahesh | Front End Developer & WordPress UI Developer Portfolio">
+    <meta property="og:description"
+        content="Clean, modern websites by Mahesh — a skilled Frontend and WordPress UI Developer focused on performance, SEO, and responsive design.">
+    <meta property="og:image" content="social-media-sharing.webp">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://mahesh.devconsole.site/">
+    <meta name="twitter:title" content="Mahesh | Front End Developer & WordPress UI Developer Portfolio">
+    <meta name="twitter:description"
+        content="Mahesh s creates fast, responsive websites using modern frontend and WordPress development practices. View his featured work and services.">
+    <meta name="twitter:image" content="social-media-sharing.webp">
+
+    <!-- Favicon and touch icons -->
+    <link rel="shortcut icon" href="fve.webp" type="image/x-icon">
+    <link rel="apple-touch-icon" type="image/x-icon" href="fve.webp">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="72x72" href="fve.webp">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="114x114" href="fve.webp">
+    <link rel="apple-touch-icon" type="image/x-icon" sizes="144x144" href="fve.webp">
+    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        dark: '#050505',
+                        primary: '#00f2ea',
+                        secondary: '#ff0055',
+                        glass: 'rgba(255, 255, 255, 0.03)',
+                        'glass-hover': 'rgba(255, 255, 255, 0.08)',
+                    },
+                    backgroundImage: {
+                        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+            cursor: none;
+        }
+
+        /* Noise Texture */
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+        }
+
+        /* Custom Cursor */
+        .cursor-dot,
+        .cursor-outline {
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .cursor-dot {
+            width: 8px;
+            height: 8px;
+            background-color: #00f2ea;
+            box-shadow: 0 0 10px #00f2ea;
+        }
+
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(0, 242, 234, 0.5);
+            transition: width 0.2s, height 0.2s, background-color 0.2s;
+        }
+
+        /* Glassmorphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 30px rgba(0, 242, 234, 0.1);
+        }
+
+        /* Gradient Text */
+        .text-gradient {
+            background: linear-gradient(135deg, #00f2ea 0%, #ffffff 50%, #ff0055 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% auto;
+            animation: gradient-move 5s linear infinite;
+        }
+
+        @keyframes gradient-move {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Floating Particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: #00f2ea;
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 20s infinite;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(100vh) translateX(0);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 0.4;
+            }
+
+            50% {
+                transform: translateY(-10vh) translateX(50px);
+            }
+        }
+
+        /* Spotlight Effect */
+        .spotlight-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 1.5rem;
+            padding: 1px;
+            background: radial-gradient(800px circle at var(--mouse-x) var(--mouse-y),
+                    rgba(255, 255, 255, 0.3),
+                    transparent 40%);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .spotlight-group:hover .spotlight-card::before {
+            opacity: 1;
+        }
+
+        /* 3D Code Editor & Tilt Styles */
+        .perspective-1000 {
+            perspective: 1000px;
+        }
+
+        .code-editor-card,
+        .tilt-card {
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+            will-change: transform;
+        }
+
+        .tilt-content {
+            transform: translateZ(20px);
+        }
+
+        .typing-cursor {
+            animation: blink 1s step-end infinite;
+        }
+
+        @keyframes blink {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* Marquee Animation */
+        .marquee-wrapper {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+
+        .marquee-content {
+            display: flex;
+            gap: 2rem;
+            width: max-content;
+        }
+
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+
+        .animate-marquee-reverse {
+            animation: marquee-reverse 30s linear infinite;
+        }
+
+        .marquee-content:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes marquee {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes marquee-reverse {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-primary selection:text-dark">
+
+    <!-- Noise Overlay -->
+    <div class="bg-noise"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <nav
+        class="fixed w-full z-50 top-0 left-0 px-6 py-4 flex justify-between items-center glass-card border-none rounded-none bg-dark/80 backdrop-blur-xl border-b border-white/5">
+        <a href="index.html" class="text-2xl font-black tracking-tighter relative group">Mahesh S<span
+                class="text-primary group-hover:text-secondary transition-colors">.</span>
+            <div class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300">
+            </div>
+        </a>
+        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-300">
+            <a href="#home" class="hover:text-primary transition-colors relative group">Home<span
+                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span></a>
+            <a href="#about" class="hover:text-primary transition-colors relative group">About<span
+                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span></a>
+            <a href="#work" class="hover:text-primary transition-colors relative group">Work<span
+                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span></a>
+            <a href="#contact" class="hover:text-primary transition-colors relative group">Contact<span
+                    class="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary group-hover:w-full transition-all duration-300"></span></a>
+        </div>
+        <a href="#contact"
+            class="px-6 py-2 border border-white/10 bg-white/5 text-white rounded-full text-sm font-medium hover:bg-primary hover:text-dark hover:border-primary transition-all duration-300 shadow-[0_0_20px_rgba(0,242,234,0)] hover:shadow-[0_0_20px_rgba(0,242,234,0.4)]">Let's
+            Talk</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home"
+        class="min-h-screen flex flex-col justify-center items-center relative px-4 pt-20 overflow-hidden">
+        <!-- Animated Grid Background -->
+        <div class="absolute inset-0 pointer-events-none opacity-20">
+            <div class="hero-grid absolute inset-0"
+                style="background-image: linear-gradient(rgba(0, 242, 234, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0, 242, 234, 0.1) 1px, transparent 1px); background-size: 50px 50px; mask-image: radial-gradient(circle at center, black, transparent 80%);">
+            </div>
+        </div>
+
+        <!-- Floating Particles -->
+        <div class="particles absolute inset-0 pointer-events-none">
+            <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+            <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+            <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+            <div class="particle" style="left: 70%; animation-delay: 1s;"></div>
+            <div class="particle" style="left: 90%; animation-delay: 3s;"></div>
+        </div>
+
+        <!-- Glowing Orbs -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none hero-shapes">
+            <div
+                class="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[128px] animate-pulse-slow">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[128px] animate-pulse-slow"
+                style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="text-center z-10 max-w-7xl relative grid md:grid-cols-2 gap-16 items-center">
+            <!-- Text Content (Left) -->
+            <div class="text-left order-2 md:order-1">
+                <div
+                    class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-white/10 bg-white/5 mb-6 backdrop-blur-md opacity-0 translate-y-4 hero-subtitle">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    <span class="text-xs font-mono text-gray-300">Available for hire</span>
+                </div>
+                <h1
+                    class="hero-title text-6xl md:text-8xl font-black tracking-tight leading-[0.9] mb-8 overflow-hidden relative">
+                    <span class="inline-block translate-y-full hero-word-1">CREATIVE</span><br>
+                    <span class="inline-block translate-y-full text-gradient hero-word-2 pb-2">DEVELOPER</span>
+                </h1>
+                <p
+                    class="hero-desc text-gray-400 text-lg md:text-xl max-w-xl mb-10 opacity-0 translate-y-4 leading-relaxed border-l-2 border-primary/30 pl-6">
+                    I craft <span class="text-white font-semibold">immersive digital experiences</span> that blend
+                    artistic design with robust engineering. Specializing in <span class="text-primary">WordPress</span>
+                    &
+                    <span class="text-secondary">Interactive UI</span>.
+                </p>
+                <div class="hero-btn opacity-0 translate-y-4 flex gap-4 flex-wrap">
+                    <a href="#work"
+                        class="group relative inline-flex items-center gap-3 px-8 py-4 bg-white text-dark rounded-full font-bold overflow-hidden shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(0,242,234,0.4)] transition-all duration-300">
+                        <span class="relative z-10">View Projects</span>
+                        <svg class="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                        <div
+                            class="absolute inset-0 bg-primary transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300 ease-out">
+                        </div>
+                    </a>
+                    <a href="#contact"
+                        class="group relative inline-flex items-center gap-2 px-8 py-4 border border-white/20 text-white rounded-full font-bold overflow-hidden hover:border-primary/50 transition-colors bg-white/5 backdrop-blur-sm">
+                        <span class="relative z-10">Contact Me</span>
+                        <div
+                            class="absolute inset-0 bg-white/10 transform scale-y-0 group-hover:scale-y-100 transition-transform origin-bottom duration-300">
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- 3D Code Editor (Right) -->
+            <div class="relative order-1 md:order-2 perspective-1000">
+                <div
+                    class="absolute -inset-10 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-full blur-3xl opacity-40 animate-pulse-slow">
+                </div>
+                <div
+                    class="code-editor-card tilt-card glass-card rounded-xl overflow-hidden shadow-2xl transform transition-transform duration-500 hover:scale-[1.02] border border-white/10 bg-[#0a0a0a]/90 backdrop-blur-xl relative z-10">
+                    <div class="bg-white/5 px-4 py-3 flex items-center gap-2 border-b border-white/5">
+                        <div class="flex gap-2">
+                            <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                            <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                            <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                        </div>
+                        <div class="ml-4 text-xs text-gray-500 font-mono">portfolio.config.ts</div>
+                    </div>
+                    <div
+                        class="p-6 font-mono text-sm md:text-base leading-relaxed text-left h-[320px] overflow-hidden relative">
+                        <div
+                            class="absolute left-4 top-6 text-gray-700 select-none text-right font-mono text-xs leading-6">
+                            01<br>02<br>03<br>04<br>05<br>06<br>07<br>08<br>09<br>10<br>11</div>
+                        <div class="pl-10 code-content text-gray-300 leading-6">
+                            <span class="text-purple-400">const</span> <span class="text-yellow-400">developer</span> =
+                            {<br>
+                            &nbsp;&nbsp;<span class="text-blue-300">name</span>: <span class="text-green-400">"Mahesh
+                                S"</span>,<br>
+                            &nbsp;&nbsp;<span class="text-blue-300">role</span>: <span class="text-green-400">"Creative
+                                Dev"</span>,<br>
+                            &nbsp;&nbsp;<span class="text-blue-300">skills</span>: [<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"WordPress"</span>,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"Websites"</span>,<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-green-400">"Angular"</span><br>
+                            &nbsp;&nbsp;],<br>
+                            &nbsp;&nbsp;<span class="text-yellow-400">buildAwesome</span>: <span
+                                class="text-purple-400">async</span> () => {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">while</span>(<span
+                                class="text-blue-400">true</span>) {<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-blue-400">await</span> <span
+                                class="text-yellow-400">createMagic</span>();<br>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+                            &nbsp;&nbsp;}<br>
+                            };<br>
+                            <span class="typing-cursor inline-block w-2 h-5 bg-primary align-middle"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 px-6 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="relative about-image opacity-0 -translate-x-10 group">
+                <div class="aspect-[4/5] rounded-2xl overflow-hidden relative z-10 border border-white/10">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-tr from-primary/40 to-secondary/40 mix-blend-overlay z-10 opacity-50 group-hover:opacity-0 transition-opacity duration-500">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?q=80&w=1000&auto=format&fit=crop"
+                        alt="Mahesh S"
+                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110">
+                </div>
+                <!-- Creative Badge -->
+                <div class="absolute -bottom-8 -right-8 w-48 h-48 bg-dark/90 backdrop-blur-xl border border-white/10 rounded-full p-4 flex flex-col justify-center items-center z-20 shadow-2xl animate-spin-slow"
+                    style="animation-duration: 20s;">
+                    <svg class="absolute inset-0 w-full h-full text-gray-600" viewBox="0 0 100 100">
+                        <path id="circlePath" d="M 50, 50 m -35, 0 a 35,35 0 1,1 70,0 a 35,35 0 1,1 -70,0"
+                            fill="none" />
+                        <text font-size="9" fill="currentColor" letter-spacing="2">
+                            <textPath href="#circlePath" startOffset="0%">CREATIVE • DEVELOPER • DESIGNER •</textPath>
+                        </text>
+                    </svg>
+                    <span class="text-4xl font-bold text-primary relative z-10">4+</span>
+                    <span class="text-xs text-gray-400 uppercase tracking-widest relative z-10">Years</span>
+                </div>
+                <div
+                    class="absolute -top-4 -left-4 w-full h-full border border-primary/30 rounded-2xl -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform duration-500">
+                </div>
+            </div>
+            <div class="about-content opacity-0 translate-x-10">
+                <span class="text-primary tracking-[0.2em] text-xs font-bold uppercase mb-4 block">Who I Am</span>
+                <h2 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">Turning complex code into <span
+                        class="text-gradient">beautiful art</span>.</h2>
+                <div class="space-y-6 text-gray-400 text-lg leading-relaxed">
+                    <p>I am a dedicated Front-End Developer with a strong foundation in <span
+                            class="text-white">Angular</span> and <span class="text-white">WordPress</span>. My journey
+                        involves turning complex problems into simple, beautiful, and intuitive interface designs.</p>
+                    <p>When I'm not coding, you can find me exploring new web technologies, contributing to open-source
+                        projects, or refining my design skills. I believe in <span
+                            class="italic text-primary">continuous learning</span> and pushing the boundaries.</p>
+                </div>
+
+                <div class="mt-10 flex flex-wrap gap-4">
+                    <div
+                        class="px-6 py-3 rounded-full bg-white/10 border border-white/20 flex items-center gap-3 hover:bg-white/10 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_#00f2ea]"></span>
+                        <span class="text-sm font-medium">Problem Solver</span>
+                    </div>
+                    <div
+                        class="px-6 py-3 rounded-full bg-white/10 border border-white/20 flex items-center gap-3 hover:bg-white/10 transition-colors">
+                        <span class="w-2 h-2 rounded-full bg-secondary shadow-[0_0_10px_#ff0055]"></span>
+                        <span class="text-sm font-medium">Creative Thinker</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section (2x2 Grid with 3D Tilt) -->
+    <section id="features" class="py-32 px-6 relative overflow-hidden bg-dark/50 spotlight-group">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full max-w-7xl pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[120px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[120px]"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="text-center mb-24 feature-header opacity-0">
+                <span class="text-primary tracking-[0.2em] text-xs font-bold uppercase">What I Do</span>
+                <h2 class="text-4xl md:text-6xl font-bold mt-4">Features</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6" id="features-grid">
+                <!-- Feature 1 -->
+                <div class="feature-card opacity-0 translate-y-10 relative group h-full perspective-1000">
+                    <div
+                        class="glass-card spotlight-card tilt-card p-10 h-full relative overflow-hidden rounded-3xl border border-white/5 bg-dark/50 flex flex-col justify-between hover:border-primary/30 transition-colors duration-500">
+                        <div class="tilt-content">
+                            <div
+                                class="absolute right-0 top-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-500 group-hover:bg-primary/10">
+                            </div>
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 border border-primary/20">
+                                    <span class="text-2xl">💻</span>
+                                </div>
+                                <h3 class="text-3xl font-bold mb-4 text-white">Frontend Development</h3>
+                                <p class="text-gray-400 text-lg leading-relaxed">
+                                    Crafting seamless and user-friendly web interfaces with modern frameworks & clean,
+                                    scalable code. I transform ideas into responsive and visually engaging digital
+                                    experiences.
+                                </p>
+                            </div>
+                            <div class="flex gap-3 mt-8 flex-wrap">
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    Angular
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    HTML / CSS / SCSS
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    Bootstrap / Tailwind CSS
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    Responsive UI
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="feature-card opacity-0 translate-y-10 relative group h-full perspective-1000">
+                    <div
+                        class="glass-card spotlight-card tilt-card p-10 h-full relative overflow-hidden rounded-3xl border border-white/5 bg-dark/50 flex flex-col justify-between hover:border-secondary/30 transition-colors duration-500">
+                        <div class="tilt-content">
+                            <div
+                                class="absolute right-0 top-0 w-64 h-64 bg-secondary/5 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-500 group-hover:bg-secondary/10">
+                            </div>
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-secondary/10 flex items-center justify-center mb-6 border border-secondary/20">
+                                    <span class="text-2xl">🎨</span>
+                                </div>
+                                <h3 class="text-3xl font-bold mb-4 text-white">WordPress Developer</h3>
+                                <p class="text-gray-400 text-lg leading-relaxed">
+                                    I build responsive, user-friendly & SEO-optimized WordPress websites from custom
+                                    themes to full e-commerce solutions.
+                                </p>
+                            </div>
+                            <div class="flex gap-3 mt-8 flex-wrap">
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    WordPress
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    WooCommerce
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    Elementor
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="feature-card opacity-0 translate-y-10 relative group h-full perspective-1000">
+                    <div
+                        class="glass-card spotlight-card tilt-card p-10 h-full relative overflow-hidden rounded-3xl border border-white/5 bg-dark/50 flex flex-col justify-between hover:border-green-500/30 transition-colors duration-500">
+                        <div class="tilt-content">
+                            <div
+                                class="absolute right-0 top-0 w-64 h-64 bg-green-500/5 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-500 group-hover:bg-green-500/10">
+                            </div>
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 border border-green-500/20">
+                                    <span class="text-2xl">⚡</span>
+                                </div>
+                                <h3 class="text-3xl font-bold mb-4 text-white">Performance & SEO</h3>
+                                <p class="text-gray-400 text-lg leading-relaxed">
+                                    Optimizing web applications for lightning-fast load times and maximum search engine
+                                    visibility.
+                                </p>
+                            </div>
+                            <div class="flex gap-3 mt-8 flex-wrap">
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    Core Web Vitals
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    Analytics
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    Google Search Console
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="feature-card opacity-0 translate-y-10 relative group h-full perspective-1000">
+                    <div
+                        class="glass-card spotlight-card tilt-card p-10 h-full relative overflow-hidden rounded-3xl border border-white/5 bg-dark/50 flex flex-col justify-between hover:border-green-500/30 transition-colors duration-500">
+                        <div class="tilt-content">
+                            <div
+                                class="absolute right-0 top-0 w-64 h-64 bg-green-500/5 rounded-full blur-3xl -mr-16 -mt-16 transition-all duration-500 group-hover:bg-green-500/10">
+                            </div>
+                            <div>
+                                <div
+                                    class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center mb-6 border border-green-500/20">
+                                    <span class="text-2xl">✨</span>
+                                </div>
+                                <h3 class="text-3xl font-bold mb-4 text-white">AI Productivity Boost</h3>
+                                <p class="text-gray-400 text-lg leading-relaxed">
+                                    Using AI tools to speed up development, improve design quality & deliver faster
+                                    results. From writing clean code to generating creative UI ideas AI helps build
+                                    smarter, not harder.
+                                </p>
+                            </div>
+                            <div class="flex gap-3 mt-8 flex-wrap">
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    ChatGPT
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    DeepSeek
+                                </span>
+                                <span class="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-xs">
+                                    Google Antigravity
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Section -->
+    <section id="work" class="py-32 px-6 bg-dark relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-20">
+                <div>
+                    <span class="text-primary tracking-[0.2em] text-xs font-bold uppercase">Portfolio</span>
+                    <h2 class="text-4xl md:text-7xl font-bold mt-4">Selected <span class="text-gradient">Work</span>
+                    </h2>
+                </div>
+                <!-- <a href="projects.html"
+                    class="hidden md:flex items-center gap-2 text-gray-400 hover:text-white transition-colors group">
+                    View All Projects
+                    <span class="group-hover:translate-x-1 transition-transform">-></span>
+                </a> -->
+            </div>
+
+            <div class="space-y-32">
+                <!-- Project 1 (Reversed) -->
+                <div class="project-card group grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-5 relative z-20 order-2 md:order-1">
+                        <div class="glass-card p-8 md:p-10 bg-dark/80 backdrop-blur-xl border-white/10 md:-mr-12">
+                            <span class="text-secondary font-mono text-xs mb-4 block">02 /
+                                WordPress</span>
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4">
+                                Passive Income Online Ideas
+                            </h3>
+
+                            <p class="text-gray-400 mb-8 leading-relaxed">
+                                Discover powerful ways to build passive income online through blogging, affiliate
+                                marketing, digital products, YouTube channels, and modern AI-powered businesses. Learn
+                                practical strategies, real-world success tips, and scalable online opportunities to
+                                create long-term income from anywhere.
+                            </p>
+                            <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                Elementor
+                            </span>
+
+                            <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                SEO Optimization
+                            </span>
+
+                            <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                Security
+                            </span>
+
+                            <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                Optimization
+                            </span>
+
+                            <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                Responsive
+                            </span>
+                            <br>
+                            <div>
+                                <a href="https://passiveincomeonlineideas.com/" target="_blank"
+                                    class="inline-flex items-center gap-2 text-white border-b border-secondary pb-1 hover:text-secondary transition-colors">View
+                                    Case Study
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:col-span-7 relative order-1 md:order-2">
+                        <div
+                            class="aspect-video rounded-2xl overflow-hidden border border-white/10 relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-pink-900/80 to-red-900/80 mix-blend-multiply z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div class="w-full h-full bg-gray-800 flex items-center justify-center text-6xl">
+                                <img src="passiveincomeonlineideas.PNG" alt="passiveincomeonlineideas"
+                                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -inset-4 bg-secondary/20 blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card group grid md:grid-cols-12 gap-8 items-center">
+                    <div class="md:col-span-7 relative">
+                        <div
+                            class="aspect-video rounded-2xl overflow-hidden border border-white/10 relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-purple-900/80 to-blue-900/80 mix-blend-multiply z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                            <div class="w-full h-full bg-gray-800 flex items-center justify-center text-6xl">
+                                <img src="flight.PNG" alt="flight"
+                                    class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110">
+                            </div>
+                        </div>
+                        <div
+                            class="absolute -inset-4 bg-primary/20 blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        </div>
+                    </div>
+                    <div class="md:col-span-5 md:-ml-12 relative z-20">
+                        <div class="glass-card p-8 md:p-10 bg-dark/80 backdrop-blur-xl border-white/10">
+                            <span class="text-primary font-mono text-xs mb-4 block">01 / Web Development</span>
+                            <h3 class="text-3xl md:text-4xl font-bold mb-4">
+                                Flight Reservation Help
+                            </h3>
+
+                            <p class="text-gray-400 mb-8 leading-relaxed">
+                                A modern flight booking support website optimized for Google Ads, fast performance, and
+                                responsive user experience across all devices.
+                            </p>
+
+                            <div class="flex flex-wrap gap-4 mb-8">
+                                <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                    HTML
+                                </span>
+
+                                <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                    CSS
+                                </span>
+
+                                <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                    Responsive Design
+                                </span>
+
+                                <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                    Optimization
+                                </span>
+
+                                <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                    Google Ads
+                                </span>
+                            </div>
+                            <a href="https://flightreservationhelp.com/" target="_blank"
+                                class="inline-flex items-center gap-2 text-white border-b border-primary pb-1 hover:text-primary transition-colors">View
+                                Case Study</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Extra Projects (Hidden by default) -->
+                <div id="extra-projects" class="hidden space-y-32">
+                    <!-- Project 3 -->
+                    <div class="project-card group grid md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-7 relative">
+                            <div
+                                class="aspect-video rounded-2xl overflow-hidden border border-white/10 relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-tr from-green-900/80 to-teal-900/80 mix-blend-multiply z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                </div>
+                                <div class="w-full h-full bg-gray-800 flex items-center justify-center text-6xl">
+                                    <img src="zealousxr.webp" alt="zealousxr"
+                                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110">
+                                </div>
+                            </div>
+                            <div
+                                class="absolute -inset-4 bg-green-500/20 blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                        </div>
+                        <div class="md:col-span-5 md:-ml-12 relative z-20">
+                            <div class="glass-card p-8 md:p-10 bg-dark/80 backdrop-blur-xl border-white/10">
+                                <span class="text-green-400 font-mono text-xs mb-4 block">03 / Web Development</span>
+                                <h3 class="text-3xl md:text-4xl font-bold mb-4">Zealous</h3>
+                                <p class="text-gray-400 mb-8 leading-relaxed">
+                                    An immersive storytelling platform that uses scroll-triggered animations and audio
+                                    to
+                                    guide users through narrative experiences.
+                                </p>
+                                <div class="flex gap-4 mb-8">
+                                    <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                        HTML / CSS / CSS
+                                    </span>
+                                    <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                        Bootstrap / Page Speed
+                                    </span>
+                                    <span class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">
+                                        Search Console
+                                    </span>
+                                </div>
+                                <a href="https://www.zealousxr.com/" target="_blank"
+                                    class="inline-flex items-center gap-2 text-white border-b border-primary pb-1 hover:text-primary transition-colors">View
+                                    Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 (Reversed) -->
+                    <div class="project-card group grid md:grid-cols-12 gap-8 items-center">
+                        <div class="md:col-span-5 relative z-20 order-2 md:order-1">
+                            <div class="glass-card p-8 md:p-10 bg-dark/80 backdrop-blur-xl border-white/10 md:-mr-12">
+                                <span class="text-yellow-400 font-mono text-xs mb-4 block">04 / WordPress /
+                                    BUSINESS</span>
+                                <h3 class="text-3xl md:text-4xl font-bold mb-4">BM e-Solutions</h3>
+                                <p class="text-gray-400 mb-8 leading-relaxed">
+                                    Build powerful, responsive WordPress websites tailored to your business needs.
+                                    Fast, secure, SEO-optimized solutions designed for growth and performance.
+                                </p>
+                                <div class="flex gap-4 mb-8">
+                                    <span
+                                        class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">WordPress</span>
+                                    <span
+                                        class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">Elementor</span>
+                                    <span
+                                        class="px-3 py-1 text-xs border border-white/10 rounded-full text-gray-400">Customizer</span>
+                                </div>
+                                <a href="https://www.bmesolutions.in/" target="_blank"
+                                    class="inline-flex items-center gap-2 text-white border-b border-secondary pb-1 hover:text-secondary transition-colors">View
+                                    Now</a>
+                            </div>
+                        </div>
+                        <div class="md:col-span-7 relative order-1 md:order-2">
+                            <div
+                                class="aspect-video rounded-2xl overflow-hidden border border-white/10 relative z-10 group-hover:-translate-y-2 transition-transform duration-500">
+                                <div
+                                    class="absolute inset-0 bg-gradient-to-tr from-yellow-900/80 to-orange-900/80 mix-blend-multiply z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                                </div>
+                                <div class="w-full h-full bg-gray-800 flex items-center justify-center text-6xl">
+                                    <img src="bmesolutions.webp" alt="bmesolutions"
+                                        class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110">
+                                </div>
+                            </div>
+                            <div
+                                class="absolute -inset-4 bg-yellow-500/20 blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-20">
+                    <button id="toggle-projects"
+                        class="group relative inline-flex items-center gap-3 px-8 py-4 bg-white/5 border border-white/20 text-white rounded-full font-bold overflow-hidden hover:border-primary transition-all duration-300">
+                        <span class="relative z-10">Read More</span>
+                        <div
+                            class="absolute inset-0 bg-primary/10 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300">
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section (Infinite Marquee) -->
+    <section id="skills" class="py-32 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto relative z-10 mb-16 px-6">
+            <div class="text-center">
+                <span class="text-primary tracking-[0.2em] text-xs font-bold uppercase">Expertise</span>
+                <h2 class="text-4xl md:text-6xl font-bold mt-4">Tech Stack</h2>
+            </div>
+        </div>
+
+        <!-- Marquee Row 1 -->
+        <div class="marquee-wrapper mb-8">
+            <div class="marquee-content animate-marquee">
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-primary hover:text-dark transition-colors">
+                    HTML5</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-secondary hover:text-white transition-colors">
+                    CSS3</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-yellow-400 hover:text-dark transition-colors">
+                    JavaScript</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-red-500 hover:text-white transition-colors">
+                    Angular</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-blue-500 hover:text-white transition-colors">
+                    React</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-purple-500 hover:text-white transition-colors">
+                    WordPress</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-green-500 hover:text-white transition-colors">
+                    Node.js</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-orange-500 hover:text-white transition-colors">
+                    Git</div>
+                <!-- Duplicated for Loop -->
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-primary hover:text-dark transition-colors">
+                    HTML5</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-secondary hover:text-white transition-colors">
+                    CSS3</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-yellow-400 hover:text-dark transition-colors">
+                    JavaScript</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-red-500 hover:text-white transition-colors">
+                    Angular</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-blue-500 hover:text-white transition-colors">
+                    React</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-purple-500 hover:text-white transition-colors">
+                    WordPress</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-green-500 hover:text-white transition-colors">
+                    Node.js</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-orange-500 hover:text-white transition-colors">
+                    Git</div>
+            </div>
+        </div>
+
+        <!-- Marquee Row 2 (Reverse) -->
+        <div class="marquee-wrapper">
+            <div class="marquee-content animate-marquee-reverse">
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-cyan-400 hover:text-dark transition-colors">
+                    Tailwind</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-pink-500 hover:text-white transition-colors">
+                    Sass</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-blue-400 hover:text-white transition-colors">
+                    TypeScript</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-white hover:text-dark transition-colors">
+                    Next.js</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-orange-400 hover:text-dark transition-colors">
+                    Firebase</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-green-400 hover:text-dark transition-colors">
+                    MongoDB</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-purple-400 hover:text-white transition-colors">
+                    Redux</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-yellow-300 hover:text-dark transition-colors">
+                    Python</div>
+                <!-- Duplicated for Loop -->
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-cyan-400 hover:text-dark transition-colors">
+                    Tailwind</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-pink-500 hover:text-white transition-colors">
+                    Sass</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-blue-400 hover:text-white transition-colors">
+                    TypeScript</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-white hover:text-dark transition-colors">
+                    Next.js</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-orange-400 hover:text-dark transition-colors">
+                    Firebase</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-green-400 hover:text-dark transition-colors">
+                    MongoDB</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-purple-400 hover:text-white transition-colors">
+                    Redux</div>
+                <div
+                    class="skill-tag px-8 py-4 rounded-full bg-white/10 border border-white/20 text-xl font-bold whitespace-nowrap hover:bg-yellow-300 hover:text-dark transition-colors">
+                    Python</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section (Responsive Timeline) -->
+    <section id="resume" class="py-32 px-6 relative overflow-hidden">
+        <!-- Video Background -->
+        <video autoplay muted loop playsinline class="absolute inset-0 w-full h-full object-cover z-0 opacity-40">
+            <source src="Experience.webm" type="video/webm">
+        </video>
+        <!-- Overlay for readability -->
+        <div class="absolute inset-0 bg-dark/60 z-0"></div>
+
+        <div class="max-w-5xl mx-auto relative z-10">
+            <div class="text-center mb-20">
+                <span class="text-primary tracking-[0.2em] text-xs font-bold uppercase">Journey</span>
+                <h2 class="text-4xl md:text-6xl font-bold mt-4">Experience</h2>
+            </div>
+
+            <div class="relative pl-8 md:pl-0">
+                <!-- Timeline Line -->
+                <div class="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-white/10 md:-translate-x-1/2">
+                    <div
+                        class="resume-line-fill absolute top-0 left-0 w-full h-0 bg-gradient-to-b from-primary via-secondary to-transparent">
+                    </div>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Item 2 (Right on Desktop) -->
+                    <div
+                        class="resume-item relative flex flex-col md:flex-row-reverse items-start md:items-center md:justify-between group opacity-0 translate-y-8">
+                        <!-- Dot -->
+                        <div
+                            class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-3 h-3 rounded-full bg-secondary shadow-[0_0_10px_#ff0055] z-20 border border-dark">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="md:w-[45%] md:text-left md:pl-12 pl-6 md:pl-0">
+                            <h3 class="text-2xl font-bold text-white">Front End Developer</h3>
+                            <p class="text-secondary font-mono text-sm mb-2">Zealous Healthcare Services • 2026 -
+                                Present
+                            </p>
+                            <p class="text-gray-400 text-sm leading-relaxed">
+                                At Zealous Healthcare Services, I specialize in creating high-performance web
+                                experiences, optimizing hospital websites for speed and SEO, developing responsive
+                                websites, and creating landing pages for Google Ads campaigns to improve lead generation
+                                and online visibility.
+                            </p>
+                        </div>
+
+                        <!-- Empty Space -->
+                        <div class="hidden md:block md:w-[45%]"></div>
+                    </div>
+                    <!-- Item 1 (Left on Desktop) -->
+                    <div
+                        class="resume-item relative flex flex-col md:flex-row items-start md:items-center md:justify-between group opacity-0 translate-y-8">
+                        <!-- Dot -->
+                        <div
+                            class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-3 h-3 rounded-full bg-primary shadow-[0_0_10px_#00f2ea] z-20 border border-dark">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="md:w-[45%] md:text-right md:pr-12 pl-6 md:pl-0">
+                            <h3 class="text-2xl font-bold text-white">Front End Developer</h3>
+                            <p class="text-primary font-mono text-sm mb-2">Zealous Service • 2024 - 2025
+                            </p>
+                            <p class="text-gray-400 text-sm leading-relaxed">Leading the frontend
+                                architecture for
+                                enterprise applications. Implemented modern state management and improved
+                                performance by
+                                40%.</p>
+                        </div>
+
+                        <!-- Empty Space -->
+                        <div class="hidden md:block md:w-[45%]"></div>
+                    </div>
+
+                    <!-- Item 2 (Right on Desktop) -->
+                    <div
+                        class="resume-item relative flex flex-col md:flex-row-reverse items-start md:items-center md:justify-between group opacity-0 translate-y-8">
+                        <!-- Dot -->
+                        <div
+                            class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-3 h-3 rounded-full bg-secondary shadow-[0_0_10px_#ff0055] z-20 border border-dark">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="md:w-[45%] md:text-left md:pl-12 pl-6 md:pl-0">
+                            <h3 class="text-2xl font-bold text-white">Software Developer</h3>
+                            <p class="text-secondary font-mono text-sm mb-2">BM e-Solutions • 2021 - 2023
+                            </p>
+                            <p class="text-gray-400 text-sm leading-relaxed">Full stack development using
+                                WordPress and
+                                PHP. Delivered 20+ custom client websites and managed server deployments.
+                            </p>
+                        </div>
+
+                        <!-- Empty Space -->
+                        <div class="hidden md:block md:w-[45%]"></div>
+                    </div>
+
+                    <!-- Item 3 (Left on Desktop) -->
+                    <div
+                        class="resume-item relative flex flex-col md:flex-row items-start md:items-center md:justify-between group opacity-0 translate-y-8">
+                        <!-- Dot -->
+                        <div
+                            class="absolute left-[-5px] md:left-1/2 md:-translate-x-1/2 top-0 md:top-1/2 md:-translate-y-1/2 w-3 h-3 rounded-full bg-purple-500 shadow-[0_0_10px_#a855f7] z-20 border border-dark">
+                        </div>
+
+                        <!-- Content -->
+                        <div class="md:w-[45%] md:text-right md:pr-12 pl-6 md:pl-0">
+                            <h3 class="text-2xl font-bold text-white">Bachelor's Degree</h3>
+                            <p class="text-purple-400 font-mono text-sm mb-2">University • 2017 - 2021</p>
+                            <p class="text-gray-400 text-sm leading-relaxed">Computer Science & Engineering.
+                                Specialized
+                                in Web Technologies and Human Computer Interaction.</p>
+                        </div>
+
+                        <!-- Empty Space -->
+                        <div class="hidden md:block md:w-[45%]"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-20">
+                <a href="Mahesh_Resume-2026.pdf" target="_blank" download
+                    class="resume-cta inline-flex items-center gap-3 px-8 py-4 bg-white/10 border border-white/20 rounded-full font-bold hover:bg-white/10 transition-all hover:scale-105 group opacity-0 translate-y-4">
+                    <svg class="w-5 h-5 text-primary group-hover:translate-y-1 transition-transform" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                    Download Full Resume
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 px-6 relative">
+        <div class="max-w-4xl mx-auto text-center">
+            <span class="text-primary tracking-[0.2em] text-xs font-bold uppercase">Get In Touch</span>
+            <h2 class="text-5xl md:text-8xl font-black mt-6 mb-12 tracking-tighter">LET'S WORK<br><span
+                    class="text-gradient">TOGETHER</span></h2>
+
+            <a href="mailto:contact@example.com"
+                class="group relative inline-flex items-center justify-center w-48 h-48 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl hover:scale-110 transition-transform duration-500">
+                <div
+                    class="absolute inset-0 bg-gradient-to-tr from-primary to-secondary opacity-0 group-hover:opacity-20 rounded-full transition-opacity duration-500">
+                </div>
+                <span class="text-xl font-bold group-hover:text-white transition-colors">Say Hello 👋</span>
+            </a>
+
+            <div class="flex justify-center gap-12 mt-20">
+                <a href="https://github.com/Mahesh1418" target="_blank"
+                    class="text-gray-400 hover:text-primary transition-colors text-lg font-medium tracking-wide hover:-translate-y-1 display-block transform duration-300">GITHUB
+                </a>
+                <a href="https://www.linkedin.com/in/mahesh-s-338b12255/" target="_blank"
+                    class="text-gray-400 hover:text-primary transition-colors text-lg font-medium tracking-wide hover:-translate-y-1 display-block transform duration-300">LINKEDIN
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-600 text-xs border-t border-white/5 bg-dark">
+        <p>&copy; <span id="year"></span> MAHESH S. CRAFTED WITH <span class="text-red-500">♥</span> AND CODE.</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js?v=10"></script>
+</body>
+
+</html>
